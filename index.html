@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Add this modal structure below the existing HTML -->
+    <div id="createModal" style="display:none;">
+      <h2>Create New Item</h2>
+      <form id="createForm">
+        <label for="itemType">Select Item Type:</label>
+        <select id="itemType">
+          <option value="project">Project</option>
+          <option value="event">Event</option>
+          <option value="contact">Contact</option>
+          <option value="board">Board</option>
+        </select>
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" required />
+        <button type="submit">Create</button>
+        <button type="button" onclick="closeModal()">Cancel</button>
+      </form>
+    </div>
+  </body>
+</html>
